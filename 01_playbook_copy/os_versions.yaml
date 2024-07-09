@@ -1,0 +1,15 @@
+-
+ 
+  hosts: all
+  user: docker
+  become: True
+
+  tasks:
+    - name: Copy bash script to servers
+      copy:
+       src: os_version.sh
+       dest: /var/tmp/os_version.sh
+       mode: 01777
+
+...
+
